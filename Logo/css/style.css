@@ -903,6 +903,7 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 90px;
 }
 
 .top-header__column {
@@ -992,6 +993,143 @@ body.ie ._ibg img {
   color: #fff;
 }
 
+.bottom-header__container {
+  height: 63px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bottom-header__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 95px);
+          flex: 0 1 calc(50% - 95px);
+}
+
+.actions-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actions-header li {
+  margin-right: 54px;
+}
+
+.actions-header__link {
+  display: inline-block;
+  padding: 0px 0px 0px 36px;
+  line-height: 24px;
+}
+
+.actions-header__link span {
+  border-bottom: 1px dashed;
+}
+
+._no-webp .actions-header__link_login{
+  background: url("../img/icons/header/login.png") left no-repeat; }
+
+.actions-header__link_login {
+  color: #999;
+}
+
+._no-webp .actions-header__link_reg{
+  background: url("../img/icons/header/user.png") left no-repeat; }
+
+.actions-header__link_reg {
+  color: #1ab9ce;
+}
+
+._no-webp .actions-header__link_mail{
+  background: url("../img/icons/header/mail.png") left no-repeat; }
+
+.actions-header__link_mail {
+  color: #1ab9ce;
+}
+
+.info-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-header__column {
+  padding-right: 54px;
+}
+
+.info-header__column:last-child {
+  padding-right: 0;
+}
+
+._no-webp .info-header__callback{
+  background: url("../img/icons/header/callback.png") left no-repeat; }
+
+.info-header__callback {
+  display: inline-block;
+  color: #1ab9ce;
+  line-height: 20px;
+  padding: 0px 0px 0px 32px;
+}
+
+.info-header__callback span {
+  border-bottom: 1px dashed;
+}
+
+._no-webp .info-header__chedule{
+  background: url("../img/icons/header/schedule.png") left no-repeat; }
+
+.info-header__chedule {
+  padding: 0px 0px 0px 37px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #999;
+}
+
+.info-header__chedule span {
+  font-weight: 900;
+}
+
+._no-webp .info-header__cart{
+  background: url("../img/icons/header/cart.png") 0 0 no-repeat; }
+
+.info-header__cart {
+  width: 43px;
+  height: 43px;
+  display: inline-block;
+  position: relative;
+}
+
+.info-header__cart span {
+  right: 0;
+  padding: 0px 11px;
+  color: #fff;
+  line-height: 25px;
+  position: absolute;
+  background-color: #f68038;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-transform: translate(70%, 0px);
+      -ms-transform: translate(70%, 0px);
+          transform: translate(70%, 0px);
+}
+
 /*
 //Burger
 
@@ -1017,6 +1155,16 @@ body.ie ._ibg img {
 
   .checkbox a:hover {
     text-decoration: none;
+  }
+}
+
+@media (max-width: 1180px) {
+  .actions-header li {
+    margin-right: calc(10px + 44 * ((100vw - 320px) / 860));
+  }
+
+  .info-header__column {
+    padding-right: calc(10px + 44 * ((100vw - 320px) / 860));
   }
 }
 
@@ -1094,3 +1242,15 @@ body.ie ._ibg img {
 ._webp .header{ background: url(../img/bg_header.webp) top center no-repeat; }
 
 ._webp .contacts-header__item_icon{ background: url(../img/icons/header/phone.webp) left no-repeat; }
+
+._webp .actions-header__link_login{ background: url(../img/icons/header/login.webp) left no-repeat; }
+
+._webp .actions-header__link_reg{ background: url(../img/icons/header/user.webp) left no-repeat; }
+
+._webp .actions-header__link_mail{ background: url(../img/icons/header/mail.webp) left no-repeat; }
+
+._webp .info-header__callback{ background: url(../img/icons/header/callback.webp) left no-repeat; }
+
+._webp .info-header__chedule{ background: url(../img/icons/header/schedule.webp) left no-repeat; }
+
+._webp .info-header__cart{ background: url(../img/icons/header/cart.webp) 0 0 no-repeat; }

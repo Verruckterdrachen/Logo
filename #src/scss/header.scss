@@ -8,6 +8,7 @@
   &__content {
     display: flex;
     align-items: center;
+    height: 90px;
   }
   &__column {
     flex: 0 1 50%;
@@ -120,22 +121,98 @@
     color: #fff;
   }
 }
+//========================================================================================================================================================
+
 .bottom-header {
-  &__container {}
-  &__column {}
+  &__container {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__column {
+    flex: 0 1 calc(50% - 95px);
+  }
   &__actions {}
   &__info {}
 }
 .actions-header {
-  &__login {}
-  &__reg {}
-  &__mail {}
+  display: flex;
+  align-items: center;
+  li {
+    @include adaptiv-value("margin-right", 54, 10, 1);
+  }
+  &__link {
+    display: inline-block;
+    padding: 0px 0px 0px 36px;
+    line-height: 24px;
+    span {
+      border-bottom: 1px dashed;
+    }
+    &_login {
+      background: url('../img/icons/header/login.png') left no-repeat;
+      color: #999;
+    }
+    &_reg {
+      background: url('../img/icons/header/user.png') left no-repeat; 
+      color: #1ab9ce;
+    }
+    &_mail { 
+      background: url('../img/icons/header/mail.png') left no-repeat;
+      color: #1ab9ce;
+    }
+  }
 }
 .info-header {
-  &__column {}
-  &__callback {}
-  &__chedule {}
-  &__cart {}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__column {
+    @include adaptiv-value("padding-right", 54, 10, 1);
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+  &__callback {
+    background: url('../img/icons/header/callback.png') left no-repeat;
+    display: inline-block;
+    color: #1ab9ce;
+    line-height: 20px;
+    padding: 0px 0px 0px 32px;
+    span {
+      border-bottom: 1px dashed;
+    }
+  }
+  &__chedule {
+    background: url('../img/icons/header/schedule.png') left no-repeat;
+    padding: 0px 0px 0px 37px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #999;
+    span {
+      font-weight: 900;
+    }
+  }
+  &__cart {
+    width: 43px;
+    height: 43px;
+    display: inline-block;
+    background: url('../img/icons/header/cart.png') 0 0 no-repeat;
+    position: relative;
+    span {
+      right: 0;
+      padding: 0px 11px;
+      color: #fff;
+      line-height: 25px;
+      position: absolute;
+      background-color: #f68038;
+      border-radius: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      transform: translate(70%,0px);
+    }
+  }
 }
 //====================================================================================================
 
