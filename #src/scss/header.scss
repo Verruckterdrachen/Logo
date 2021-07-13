@@ -1,9 +1,55 @@
 //====================================================================================================
-
-//====================================================================================================
-
-/*
-//Burger
+.header {
+  background: url('../img/bg_header.jpg') top center no-repeat;
+  &__top {}
+  &__bottom {}
+}
+.top-header {
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__column {
+    flex: 0 1 50%;
+    &_logo{
+      align-self: flex-start;
+      padding: 25px 0px 0px 0px;
+      flex: 0 0 190px;  
+      text-align: center;
+    }
+  }
+  &__menu {}
+  &__logo {}
+  &__contacts {}
+}
+.menu {
+  &__icon {}
+  &__body {}
+  &__list {
+    display: grid;
+    grid-template-columns: 130px 130px 180px;
+  }
+  &__item {
+    margin: 2px 0px;
+  }
+  &__link {
+    color: #fff;
+    font-family: "Play", sans-serif;
+    white-space: nowrap;
+    height: 27px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: underline;
+    transition: all 0.3s ease 0s;
+    padding: 5px 22px;
+    @media (any-hover: hover){
+      &:hover{
+        border-radius: 20px;
+        background-color: #068292;
+      }
+    }
+  }
+}
 .icon-menu {
 	display: none;
 	@media (max-width: $md3+px) {
@@ -46,4 +92,54 @@
 		}
 	}
 }
+.contacts-header {
+  display: flex;
+  justify-content: center;
+  &__column {
+    padding: 0px 30px;
+    border-right: 1px solid #fff;
+    &:last-child{
+      border-right: none;
+    }
+  }
+  &__item {
+    &_icon {
+      background: url('../img/icons/header/phone.png') left no-repeat;
+      padding: 0px 0px 0px 37px;
+    }
+  }
+  &__label {
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0px 0px 5px 0px;
+  }
+  &__phone {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+  }
+}
+.bottom-header {
+  &__container {}
+  &__column {}
+  &__actions {}
+  &__info {}
+}
+.actions-header {
+  &__login {}
+  &__reg {}
+  &__mail {}
+}
+.info-header {
+  &__column {}
+  &__callback {}
+  &__chedule {}
+  &__cart {}
+}
+//====================================================================================================
+
+/*
+//Burger
+
 */
