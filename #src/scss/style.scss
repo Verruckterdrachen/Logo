@@ -61,6 +61,9 @@ body {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
 	padding: 0 20px;
+  @media (max-width:$md4+px){
+    padding: 0 10px; 
+  }
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
