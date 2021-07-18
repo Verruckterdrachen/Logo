@@ -97,6 +97,7 @@ body {
     flex: 1 1 auto;
     padding: 0px 0px 0px 30px;
   }
+  &__search {}
 }
 .menu-page {
   background: url('../img/bg_menu.jpg') top no-repeat;
@@ -158,7 +159,7 @@ body {
     }
   }
   &__body {
-
+    
   }
   &__list {
     > li {
@@ -326,6 +327,112 @@ body {
     font-weight: 900;
     &::after{
       font-size: 18px;
+    }    
+  }
+}
+.search-page {
+  display: flex;
+  position: relative;
+  &__select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0px 14px;
+    background-color: #f3f3f3;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-weight: 300;
+    span {
+      margin: 0px 13px;
+      border-bottom: 1px dashed;
+      &:last-child{
+        display: none;
+      }
+    }
+    &::before{
+      content:'';
+      width: 17px;
+      height: 17px;
+      background: url('../img/icons/search_page.png') 0 0 no-repeat;
+    }
+    &::after{
+      content:'';
+      transition: all 0.3s ease 0s;
+      width: 10px;
+      height: 10px;
+      background: url('../img/icons/search_page_arrows.png') 0 0 no-repeat;
+    }
+    &._categories {
+      span {
+        display: none;
+        &:last-child{
+          display: block;
+        }
+      }
+    }
+    &._active{
+      &::after{
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__categories {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+  }
+  &__input {
+    flex: 1 1 auto;
+    border-top: 2px solid #f2f2f2;
+    border-bottom: 2px solid #f2f2f2;
+    .input {
+      height: 100%;
+    }
+  }
+  &__btn {}
+}
+.categories-search {
+  background-color: #fff;
+  border: 1px solid #f3f3f3;   
+  &::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #f68038;
+  }
+  &__row {
+    display: flex;
+  }
+  &__column {
+    flex: 0 1 33.333%;
+    padding: 27px 40px;
+    &:not(:last-child) {
+      border-right: 1px solid #f3f3f3;
+    }
+  }
+  &__list {
+    li {
+      &:not(:last-child) {margin: 0px 0px 20px 0px;}
+    }
+  }
+  &__checkbox {
+    .checkbox__input {
+      &:checked + .checkbox__text {
+        color: #f68038;
+      }
+    }
+    .checkbox__text {
+      color: #999;
+      &::before{
+        display: none;
+      }
     }    
   }
 }

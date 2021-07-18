@@ -136,7 +136,23 @@ body._lock {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 0px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 25px;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 150%;
+  text-transform: uppercase;
+  height: 39px;
+  color: #fff;
+  background-color: #f68038;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
 }
 
 .btn._fw {
@@ -1457,6 +1473,147 @@ body.ie ._ibg img {
   font-size: 18px;
 }
 
+.search-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.search-page__select {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 14px;
+  background-color: #f3f3f3;
+}
+
+.search-page__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #666;
+  font-weight: 300;
+}
+
+.search-page__title span {
+  margin: 0px 13px;
+  border-bottom: 1px dashed;
+}
+
+.search-page__title span:last-child {
+  display: none;
+}
+
+._no-webp .search-page__title::before{
+  background: url("../img/icons/search_page.png") 0 0 no-repeat; }
+
+.search-page__title::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+}
+
+._no-webp .search-page__title::after{
+  background: url("../img/icons/search_page_arrows.png") 0 0 no-repeat; }
+
+.search-page__title::after {
+  content: "";
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 10px;
+  height: 10px;
+}
+
+.search-page__title._categories span {
+  display: none;
+}
+
+.search-page__title._categories span:last-child {
+  display: block;
+}
+
+.search-page__title._active::after {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.search-page__categories {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}
+
+.search-page__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+.search-page__input .input {
+  height: 100%;
+}
+
+.categories-search {
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+}
+
+.categories-search::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #f68038;
+}
+
+.categories-search__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.categories-search__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  padding: 27px 40px;
+}
+
+.categories-search__column:not(:last-child) {
+  border-right: 1px solid #f3f3f3;
+}
+
+.categories-search__list li:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+
+.categories-search__checkbox .checkbox__input:checked + .checkbox__text {
+  color: #f68038;
+}
+
+.categories-search__checkbox .checkbox__text {
+  color: #999;
+}
+
+.categories-search__checkbox .checkbox__text::before {
+  display: none;
+}
+
 @media (min-width: 767.98px) {
   .top-header__column_logo {
     -ms-flex-item-align: start;
@@ -1481,6 +1638,10 @@ body.ie ._ibg img {
 }
 
 @media (min-width: 992px) {
+  .btn:hover {
+    background-color: #d67030;
+  }
+
   .select__option:hover {
     background: #d9d9d9;
   }
@@ -1804,6 +1965,10 @@ body.ie ._ibg img {
 ._webp .menu-page__parent .menu-page__link::after{ background: url(../img/menu_arrow.webp) 0 0 no-repeat; }
 
 ._webp .item-product__add{ background: url(../img/icons/cart_gray.webp) 0 0 no-repeat; }
+
+._webp .search-page__title::before{ background: url(../img/icons/search_page.webp) 0 0 no-repeat; }
+
+._webp .search-page__title::after{ background: url(../img/icons/search_page_arrows.webp) 0 0 no-repeat; }
 
 @media (max-width: 767.98px){
 
