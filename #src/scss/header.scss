@@ -1,10 +1,15 @@
 //====================================================================================================
 .header {
-  background: url('../img/bg_header.jpg') top center no-repeat;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  background: #fff url('../img/bg_header.jpg') top no-repeat;
   &__top {}
   &__bottom {}
   @media (max-width:$md3+px){
-    background: url('../img/bg_header.jpg') 0 -20px no-repeat;
+    background: #fff url('../img/bg_header.jpg') 0 -20px no-repeat;
   }
 }
 .top-header {
