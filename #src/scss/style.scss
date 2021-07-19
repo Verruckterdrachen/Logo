@@ -123,6 +123,10 @@ body {
   &__slider {
     margin: 0px 0px 65px 0px;
   }
+  &__news-side {
+    &:not(:last-child) {margin: 0px 0px 75px 0px;}
+  }
+  &__reviews-side {}
 }
 .menu-page {
   background: url('../img/bg_menu.jpg') top repeat;
@@ -507,6 +511,123 @@ body {
         display: none;
       }
     }    
+  }
+}
+.news-side {
+  &__title {
+    display: inline-block;
+    margin: 0px 0px 25px/30px * 1em 0px;
+  }
+  &__label {
+    color: #333;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 18 / 12 * 100%;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0px 0px 20px/12px * 1em 0px;
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        color: #fd8322;
+      }
+    }
+  }
+  &__items {}
+  &__item {
+    &:not(:last-child) {margin: 0px 0px 45px 0px;}
+  }
+  &__body {
+    display: flex;
+  }
+  &__data {
+    font-size: 18px;
+    font-weight: 300;
+    color: #dadada;
+    flex: 0 0 30px;
+    text-align: center;
+    span {
+      font-size: 24px;
+      font-weight: 900;
+      display: block;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    color: #666;
+    font-weight: 300;
+    line-height: 18 / 12 * 100%;
+    padding: 0px 0px 0px 15px;
+  }
+}
+.reviews-side {
+  &__title {
+    display: inline-block;
+    margin: 0px 0px 20px/30px * 1em 0px;
+  }
+  &__items {}
+  &__item {
+    display: block;
+    margin: 0px 0px 45px 0px;
+    @media (any-hover: hover){
+      &:hover{
+        .reviews-side__user, .reviews-side__data {
+          color: #1ab9ce;
+        }
+        .reviews-side__body {
+          color: #fff;
+          background-color: #1ab9ce;
+          &::before{
+            color: #64deee;
+          }
+        }
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px 10px 0px;
+  }
+  &__user {
+    font-size: 12px;
+    font-weight: 900;
+    color: #333;
+    line-height: 18 / 12 * 100%;
+    text-transform: uppercase;
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        color: #1ab9ce;
+      }
+    }
+  }
+  &__data {
+    font-size: 12;
+    color: #999;
+    font-weight: 300;
+    line-height: 18 / 12 * 100%;
+    text-transform: uppercase;
+  }
+  &__body {
+    position: relative;
+    font-size: 12px;
+    color: #666;
+    font-weight: 300;
+    line-height: 18 / 12 * 100%;
+    padding: 14px 8px 14px 30px;
+    transition: all 0.3s ease 0s;
+    &::before{
+      content:'"';
+      position: absolute;
+      color: #dadada;
+      font-size: 48px;
+      font-weight: 900;
+      left: 8px;
+      top: 12px;
+      line-height: 1;
+    }
   }
 }
 //===================================================================================================================================
