@@ -251,10 +251,12 @@
 
 .bottom-header {
   &__container {
-    height: 63px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @media (min-width: 640px){
+      height: 63px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
   &__column {
     flex: 0 1 calc(50% - 95px);
