@@ -1,4 +1,4 @@
-const menuParents = document.querySelectorAll('.menu-page__parent');
+let menuParents = document.querySelectorAll('.menu-page__parent');
 
 for (let index = 0; index < menuParents.length; index++) {
   const menuParent = menuParents[index];
