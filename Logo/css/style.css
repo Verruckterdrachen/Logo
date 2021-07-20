@@ -1435,6 +1435,71 @@ body.ie ._ibg img {
   right: 10px;
 }
 
+._no-webp .text-block__body{
+  background: url("../img/bg_text.jpg") 0 0 no-repeat; }
+
+.text-block__body {
+  padding: 45px 35px;
+}
+
+.text-block__title {
+  font-family: "UniSans", sans-serif;
+  color: #22b7ca;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin: 0px 0px 28px 0px;
+}
+
+.text-block__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px -30px;
+}
+
+.text-block__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0px 30px;
+  color: #fff;
+}
+
+.text-block__column p {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.text-block__column p:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+
+.text-block__label {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px 0px 5px 0px;
+}
+
+.text-block__list li {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+._no-webp .text-block__list li::before{
+  background: url("../img/icons/li_arrow.png") left 1px no-repeat; }
+
+.text-block__list li::before {
+  content: "";
+  margin: 0px 17px 0px 7px;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+}
+
 .page {
   padding: 160px 0px 0px 0px;
   -webkit-box-flex: 1;
@@ -1470,6 +1535,10 @@ body.ie ._ibg img {
 
 .page__news-side:not(:last-child) {
   margin: 0px 0px 75px 0px;
+}
+
+.page__brands {
+  margin: 0px 0px 32px 0px;
 }
 
 ._no-webp .menu-page{
@@ -2754,6 +2823,10 @@ body.ie ._ibg img {
 ._webp .info-header__cart{ background: url(../img/icons/header/cart.webp) 0 0 no-repeat; }
 
 ._webp .content-mainslider__button span{ background: url(../img/icons/btn_arrow.webp) right no-repeat; }
+
+._webp .text-block__body{ background: url(../img/bg_text.webp) 0 0 no-repeat; }
+
+._webp .text-block__list li::before{ background: url(../img/icons/li_arrow.webp) left 1px no-repeat; }
 
 ._webp .menu-page{ background: url(../img/bg_menu.webp) top repeat; }
 

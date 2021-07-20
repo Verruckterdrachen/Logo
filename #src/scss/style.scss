@@ -129,7 +129,10 @@ body {
   }
   &__reviews-side {}
   &__products {}
-  &__brands {}
+  &__brands {
+    margin: 0px 0px 32px 0px;
+  }
+  &__text {}
 }
 .menu-page {
   background: url('../img/bg_menu.jpg') top repeat;
