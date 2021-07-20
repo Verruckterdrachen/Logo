@@ -150,32 +150,6 @@
     display: flex;
     align-items: center;
   }
-  &__arrow {
-    background: url('../img/icons/sl_arrow.svg') 0 0 no-repeat;
-    width: 33px;
-    height: 30px;
-    cursor: pointer;
-    @media (any-hover: hover){
-      &:hover{
-        background: url('../img/icons/sl_arrow_h.svg') 0 0 no-repeat;
-      }
-    }
-    &_prev {
-      transform: rotate(-180deg);
-      @media (any-hover: hover){
-        &:hover{
-          transform: rotate(0deg);
-        }
-      }
-    }
-    &_next {
-      @media (any-hover: hover){
-        &:hover{
-          transform: rotate(-180deg);
-        }
-      }
-    }
-  }
   &__info {
     color: #999;
     font-weight: 500;
@@ -189,4 +163,50 @@
   &__items {}
 }
 //========================================================================================================================================================
+.brands-slider {
+  border-top: 3px dashed #dadada;
+  border-bottom: 3px dashed #dadada;
+  padding: 25px 0;
+  &__container {
+    position: relative;
+  }
+  &__body {
+    padding: 0px 40px;
+  }
+  &__slide {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 0px 10px;
+    img {
+      cursor: pointer;
+      @extend %graystyle;
+      max-width: 100%;
+      transition: all 0.3s ease 0s;
+      &:hover{
+        @extend %graystyleoff;
+      }
+    }
+  }
+  &__arrows {}
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    margin: -15px 0px 0px 0px;
+    &_prev {
+      left: 10px;
+      @media (min-width:$md1+px){
+         left: 0; 
+      }
+    }
+    &_next {
+      right: 10px;
+      @media (min-width:$md1+px){
+         right: 0; 
+      }
+    }
+  }
+}
+//========================================================================================================================================================
+
 

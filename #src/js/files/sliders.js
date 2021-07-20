@@ -109,3 +109,41 @@ if (document.querySelector('.products-slider')) {
     }
   });
 }
+
+if (document.querySelector('.brands-slider')) {
+  let brandsSlider = new Swiper('.brands-slider__body', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 5,
+    spaceBetween: 0,
+    speed: 800,
+    loop: true,
+    navigation: {
+      nextEl: '.brands-slider__arrow_next',
+      prevEl: '.brands-slider__arrow_prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        autoHeight: true, 
+      },
+      480: {
+        slidesPerView: 2,
+      },
+      600: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+      }
+    },
+    on: {
+      lazyImageReady: function () {
+        ibg();
+      },
+    }
+  });
+}

@@ -112,6 +112,44 @@ if (document.querySelector('.products-slider')) {
     }
   });
 }
+
+if (document.querySelector('.brands-slider')) {
+  let brandsSlider = new Swiper('.brands-slider__body', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 5,
+    spaceBetween: 0,
+    speed: 800,
+    loop: true,
+    navigation: {
+      nextEl: '.brands-slider__arrow_next',
+      prevEl: '.brands-slider__arrow_prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        autoHeight: true, 
+      },
+      480: {
+        slidesPerView: 2,
+      },
+      600: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+      }
+    },
+    on: {
+      lazyImageReady: function () {
+        ibg();
+      },
+    }
+  });
+}
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
