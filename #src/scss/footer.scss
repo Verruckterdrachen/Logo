@@ -1,5 +1,108 @@
-footer{}
 //====================================================================================================
+.footer {
+  &__content {}
+  &__body {
+    display: flex;
+  }
+  &__column {
+    flex: 0 1 50%;
+    margin: 0px 0px 25px 0px;
+    &:first-child{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__block {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0px 0px 20px 0px;
+  }
+  &__widgets {}
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #dadada;
+  }
+  &__copy {
+    flex: 1 1 auto;
+    color: #999;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  &__social {}
+  &__payments {
 
+  }
+}
+.block-footer {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0px 0px 20px 0px;
+  &__column {
+    &:first-child{
+      flex: 0 0 165px;
+    }
+    &:last-child{
+      padding: 0px 0px 0px 45px;
+      flex: 1 1 auto;
+    }
+  }
+  &__phones {
+    background: url('../img/icons/footer-phone.png') left no-repeat;
+    padding: 0px 0px 0px 35px;
+    p {
+      &:not(:last-child) {margin: 0px 0px 10px 0px;}
+    }
+  }
+  &__phone {
+    color: #333;
+    font-weight: 900;
+    font-size: 14px;
+  }
+  &__delivery {}
+}
+.logo-footer {
+  display: inline-block;
+  margin: 0px 0px 30px 0px;
+}
+.delivery-footer {
+  &__title {
+    color: #999;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    margin: 0px 0px 10px 0px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px -15px;
+  }
+  &__item {
+    padding: 5px;
+  }
+}
+.widgets-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px -15px;
+  &__column {
+   padding: 0px 15px;
+   img {
+     max-width: 100%;
+   }
+  }
+}
+.social-footer {
+  display: flex;
+  align-items: center;
+  &__item {
+    margin: 0px 0px 0px 10px;
+  }
+}
 //====================================================================================================
 
