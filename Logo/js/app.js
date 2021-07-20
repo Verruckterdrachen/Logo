@@ -71,47 +71,15 @@ if (document.querySelector('.mainslider')) {
     spaceBetween: 0,
     autoHeight: true,
     speed: 800,
-    //loop: true,
     pagination: {
       el: '.mainslider__dotts',
       clickable: true,
     },
-    // Arrows
-    /*
-    navigation: {
-      nextEl: '.about__more .more__item_next',
-      prevEl: '.about__more .more__item_prev',
-    },*/
-    /*
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        autoHeight: true,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1268: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-    },
-    */
     on: {
       lazyImageReady: function () {
         ibg();
       },
     }
-    // And if we need scrollbar
-    //scrollbar: {
-    //	el: '.swiper-scrollbar',
-    //},
   });
   let mainsliderImages = document.querySelectorAll('.mainslider__image');
   const mainsliderDotts = document.querySelectorAll('.mainslider__dotts .swiper-pagination-bullet');
@@ -121,6 +89,29 @@ if (document.querySelector('.mainslider')) {
   }
 }
 
+if (document.querySelector('.products-slider')) {
+  let productsSlider = new Swiper('.products-slider__item', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    speed: 800,
+    pagination: {
+      el: '.products-slider__info',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.products-slider__arrow_next',
+      prevEl: '.products-slider__arrow_prev',
+    },
+    on: {
+      lazyImageReady: function () {
+        ibg();
+      },
+    }
+  });
+}
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };

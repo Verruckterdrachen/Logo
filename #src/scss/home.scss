@@ -1,7 +1,4 @@
 //====================================================================================================
-.page {
-  &__slider {}
-}
 .mainslider {
   &__body {}
   &__slide {
@@ -131,3 +128,60 @@
   }
 }
 //====================================================================================================
+.products-slider {
+  &__header {
+    display: flex;
+    margin: 0px 0px 30px 0px;
+  }
+  &__title {
+    flex: 1 1 auto;
+    color: #dadada;
+    font-family: "UniSans", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+  }
+  &__control {
+    display: flex;
+    align-items: center;
+  }
+  &__arrow {
+    background: url('../img/icons/sl_arrow.svg') 0 0 no-repeat;
+    width: 33px;
+    height: 30px;
+    cursor: pointer;
+    @media (any-hover: hover){
+      &:hover{
+        background: url('../img/icons/sl_arrow_h.svg') 0 0 no-repeat;
+      }
+    }
+    &_prev {
+      transform: rotate(-180deg);
+      @media (any-hover: hover){
+        &:hover{
+          transform: rotate(0deg);
+        }
+      }
+    }
+    &_next {
+      @media (any-hover: hover){
+        &:hover{
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  &__info {
+    color: #999;
+    font-weight: 500;
+    padding: 0px 20px;
+    .swiper-pagination-current {
+      color: #333;
+      font-size: 30px;
+      font-weight: 900;
+    }
+  }
+  &__items {}
+}
+//========================================================================================================================================================
+
