@@ -990,6 +990,18 @@ for (let index = 0; index < checkboxCategories.length; index++) {
     }
   });
 }
+
+const slider = document.querySelector('.price-filter__slider');
+
+noUiSlider.create(slider, {
+    start: [0, 100000],
+    connect: true,
+    tooltips: true,
+    range: {
+      'min': 0,
+      'max': 200000
+    }
+});
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
 // e.x. data-da=".item,992,2"

@@ -49,3 +49,15 @@ for (let index = 0; index < checkboxCategories.length; index++) {
     }
   });
 }
+
+const slider = document.querySelector('.price-filter__slider');
+
+noUiSlider.create(slider, {
+    start: [0, 100000],
+    connect: true,
+    tooltips: true,
+    range: {
+      'min': 0,
+      'max': 200000
+    }
+});
