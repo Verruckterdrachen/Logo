@@ -38,6 +38,15 @@
 	&._fw {
 		width: 100%;
 	}
+  &_gray {
+    color: #666;
+    background-color: #e6e6e6;
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: #cecece;
+      }
+    }
+  }
 }
 //</BUTTONS>====================================================================================================
 
@@ -173,7 +182,16 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text:before {
-			background: #fff url("../img/icons/check.svg") center no-repeat;
+			border: 2px solid #009aaf;
+		}
+		&:checked + .checkbox__text:after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 9px;
+      height: 9px;
+			background-color: #53b5de;
 		}
 	}
 	// .checkbox__text
@@ -181,22 +199,22 @@ textarea.input {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		font-size: 16px;
-		color: #ffffff;
-		letter-spacing: -0.3px;
-		line-height: calc(20 / 16);
+		font-size: 12px;
+    font-weight: 300;
+		color: #666;
+		line-height: calc(15 / 12);
 		cursor: pointer;
 		&:before {
 			content: "";
 			align-self: flex-start;
 			margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
+			flex: 0 0 15px;
 			left: 0;
 			top: 0;
-			width: 20px;
-			height: 18px;
+			width: 15px;
+			height: 15px;
 			background: #fff;
-			border: 1px solid #a7a9ac;
+			border: 2px solid #dadada;
 		}
 	}
 	a {
