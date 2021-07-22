@@ -61,3 +61,13 @@ noUiSlider.create(slider, {
       'max': 200000
     }
 });
+
+/*
+if (isMobile.any()) {
+  const filterTitle = document.querySelector('.filter__title');
+  filterTitle.addEventListener("click", function(e) {
+    filterTitle.classList.toggle('_active');
+    _slideToggle(filterTitle.nextElementSibling);
+  });
+}
+*/

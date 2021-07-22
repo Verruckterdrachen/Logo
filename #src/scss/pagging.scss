@@ -4,16 +4,43 @@
 	justify-content: center;
 	// .pagging__arrow
 	&__arrow {
+    width: 33px;
+    height: 25px;
+    cursor: pointer;
+    background: url('../img/icons/sl_arrow_grey.svg') 0 0 / 100% no-repeat;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        background: url('../img/icons/sl_arrow_h.svg') 0 0 / 100% no-repeat;
+      }
+    }
+    &:first-child{
+      
+    }
+    &:last-child{
+      transform: rotate(-180deg);
+    }
 	}
 	// .pagging__list
 	&__list {
+    margin: 0px 35px;
 		display: flex;
 		li {
 		}
 	}
 	// .pagging__item
 	&__item {
+    width: 33px;
+    height: 33px;
+    color: #333;
+    font-weight: 900;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
 		&._active {
+      color: #fff;
+      background-color: #fd8424;
 		}
 	}
 }

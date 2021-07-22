@@ -72,7 +72,7 @@ body {
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //@import "datepicker";
 //@import "lightgallery";
-//@import "pagging";
+@import "pagging";
 @import "popup";
 @import "header";
 @import "footer";
@@ -93,6 +93,7 @@ body {
   &__container {
     @media (min-width:$md2+px){
       display: flex;
+      padding: 0px 0px 20px 0px;
     }
   }
   &__side {
@@ -135,6 +136,33 @@ body {
   }
   &__info-menu {
     margin: 0px 0px 38px 0px;
+  }
+}
+.breadcrumbs {
+  overflow: auto;
+  margin: 0px 0px 20px 0px;
+  height: 20px;
+  &__list {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    li {
+      padding: 0px 20px 0px 0px;
+      margin: 0px 10px 0px 0px;
+      background: url('../img/icons/li_arrow.png') right / 10px no-repeat;
+      &:last-child{
+        margin: 0;
+        background: none !important;
+      }
+    }
+  }
+  &__link {
+    color: #1ab9ce;
+    text-decoration: underline;
+  }
+  &__item {
+    color: #999;
+    font-weight: 300;
   }
 }
 .menu-page {

@@ -1002,6 +1002,16 @@ noUiSlider.create(slider, {
       'max': 200000
     }
 });
+
+/*
+if (isMobile.any()) {
+  const filterTitle = document.querySelector('.filter__title');
+  filterTitle.addEventListener("click", function(e) {
+    filterTitle.classList.toggle('_active');
+    _slideToggle(filterTitle.nextElementSibling);
+  });
+}
+*/
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
 // e.x. data-da=".item,992,2"
