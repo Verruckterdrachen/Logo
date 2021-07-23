@@ -2121,6 +2121,10 @@ body.ie ._ibg img {
           flex: 1 1 auto;
 }
 
+.product__info {
+  margin: 0px 0px 70px 0px;
+}
+
 .images-product__mainslider {
   margin: 0px 0px 13px 0px;
 }
@@ -2487,6 +2491,14 @@ body.ie ._ibg img {
 
 .info-product__value {
   font-weight: 300;
+}
+
+.same-products__title {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #dadada;
+  font-size: 30px;
+  margin: 0px 0px 30px 0px;
 }
 
 .page {
@@ -3885,6 +3897,22 @@ body.ie ._ibg img {
 
   .products-slider__title {
     margin: 0px 0px 15px 0px;
+  }
+
+  .product__info {
+    margin: 0px -10px 30px -10px;
+  }
+
+  .info-product__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    font-size: 14px;
+    padding: 0px 15px;
+  }
+
+  .info-product__body {
+    padding: 25px 15px;
   }
 
   .page {
