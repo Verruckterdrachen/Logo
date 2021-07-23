@@ -2105,15 +2105,13 @@ body.ie ._ibg img {
 }
 
 .product__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 0px 0px 35px 0px;
 }
 
 .product__images {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 42%;
-          flex: 0 0 42%;
+      -ms-flex: 0 0 360px;
+          flex: 0 0 360px;
   min-width: 0;
 }
 
@@ -2121,7 +2119,6 @@ body.ie ._ibg img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 0px 0px 0px 30px;
 }
 
 .images-product__mainslider {
@@ -2185,7 +2182,7 @@ body.ie ._ibg img {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  height: 68px;
+  padding: 0px 0px 82% 0px;
   border: 1px solid #e4e4e4;
 }
 
@@ -2286,6 +2283,8 @@ body.ie ._ibg img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0px -15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .actions-product__column {
@@ -2293,6 +2292,7 @@ body.ie ._ibg img {
 }
 
 .actions-product__price {
+  white-space: nowrap;
   color: #333;
   font-size: 24px;
   font-weight: 900;
@@ -2315,6 +2315,7 @@ body.ie ._ibg img {
 }
 
 .actions-product__cart {
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2348,6 +2349,9 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   height: 34px;
   padding: 0px 15px;
   text-transform: uppercase;
@@ -3322,6 +3326,22 @@ body.ie ._ibg img {
   }
 }
 
+@media (min-width: 700px) {
+  .product__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .product__images {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .product__body {
+    padding: 0px 0px 0px 30px;
+  }
+}
+
 @media (min-width: 767.98px) {
   .top-header__column_logo {
     -ms-flex-item-align: start;
@@ -3530,6 +3550,22 @@ body.ie ._ibg img {
 
   .text-block__image {
     display: none;
+  }
+
+  .product__images {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 330px;
+            flex: 0 0 330px;
+  }
+
+  .actions-product__column:last-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .actions-product__cart {
+    margin: 15px 0px 0px 0px;
   }
 
   .categories-search__column {
@@ -3812,6 +3848,12 @@ body.ie ._ibg img {
 
   .info-menu__list li:not(:last-child) {
     margin: 0px 0px 10px 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .body-product__top {
+    padding: 12px 0px;
   }
 }
 
