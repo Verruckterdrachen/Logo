@@ -1,0 +1,87 @@
+//====================================================================================================
+.product {
+  &__title {
+    color: #333;
+    font-size: 36px;
+    font-family: "UniSans", sans-serif;
+    text-transform: uppercase;
+    margin: 0px 0px 18px 0px;
+    span {
+      display: block;
+      font-size: 30px;
+      color: #dadada;
+    }
+  }
+  &__content {
+    display: flex;
+  }
+  &__images {
+    flex: 0 0 42%;
+    min-width: 0;
+  }
+  &__body {
+    flex: 1 1 auto;
+    padding: 0px 0px 0px 30px;
+  }
+}
+//========================================================================================================================================================
+.images-product {
+  &__mainslider {
+    margin: 0px 0px 13px 0px;
+  }
+  &__mainslide {
+    border: 1px solid #f5f5f5;
+    height: 308px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__sale {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    top: 16px;
+    left: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #f68038;
+  }
+  &__image {}
+  &__subslider {
+    margin: 0px -6px;
+  }
+  &__subslide {
+    cursor: pointer;
+    padding: 0px 6px;
+    &.swiper-slide-thumb-active {
+      .images-product__subimage {
+        border: 1px solid #f68038;
+        &::after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__subimage {
+    transition: all 0.3s ease 0s;
+    height: 68px;
+    border: 1px solid #e4e4e4;
+    &::after{
+      content:'';
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: 3px solid #f68038;
+    }
+  }
+}
+//========================================================================================================================================================

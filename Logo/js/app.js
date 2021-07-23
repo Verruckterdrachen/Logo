@@ -150,6 +150,38 @@ if (document.querySelector('.brands-slider')) {
     }
   });
 }
+
+if (document.querySelector('.images-product')) {
+  let imagesSubSlider = new Swiper('.images-product__subslider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 4,
+    spaceBetween: 0,
+    speed: 800,
+    //loop: true,
+    on: {
+      lazyImageReady: function () {
+        ibg();
+      },
+    }
+  });
+  let imagesSlider = new Swiper('.images-product__mainslider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 800,
+    //loop: true,
+    on: {
+      lazyImageReady: function () {
+        ibg();
+      },
+    },
+    thumbs: {
+      swiper: imagesSubSlider
+    }
+  });
+}
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
