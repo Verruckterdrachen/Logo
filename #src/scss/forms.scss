@@ -170,6 +170,7 @@ textarea {
 	&._focus {
 	}
 	&._error {
+    border: 1px solid tomato;
 	}
 }
 textarea.input {
